@@ -1,0 +1,11 @@
+@import "./icons/style.css";
+@import "./variables";
+@import "./offset";
+@import url("https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: var(--font-noto-sans);
+  background: var(--color-light);
+  margin: 0;
+  padding: 0 0 70px 0;
+}

@@ -1,0 +1,64 @@
+@import "@/styles/media";
+
+.product {
+  width: 164px;
+
+  &__name {
+    margin: 8px 4px;
+    overflow: hidden;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  &__price {
+    margin-top: 8px;
+    padding: 0 4px;
+  }
+
+  &__btn {
+    margin-top: 12px;
+  }
+
+  &__image {
+    border-radius: 8px;
+    position: relative;
+    max-width: 164px;
+    height: 144px;
+    background: var(--color-image-bg);
+
+    img {
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: 8px;
+      left: 8px;
+      top: 8px;
+      bottom: 8px;
+      right: 8px;
+      background: var(--color-light);
+    }
+  }
+
+  @media (min-width: $xs) {
+    width: 228px;
+    &__image {
+      max-width: 228px;
+      height: 201px;
+    }
+  }
+
+  @media (min-width: $md) {
+    width: 264px;
+
+    &__image {
+      max-width: 264px;
+      height: 232px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.main {
+  z-index: 99;
+  position: fixed;
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  background: var(--color-dark);
+  border-radius: 15px;
+  max-width: 383px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__item {
+    font-size: 20px;
+    color: #bebebe;
+    display: flex;
+    row-gap: 5px;
+    flex-direction: column;
+    text-align: center;
+    padding: 8px;
+    border-radius: 5px;
+
+    &-active {
+      color: var(--color-light);
+      // background: var(--color-blue);
+    }
+  }
+}

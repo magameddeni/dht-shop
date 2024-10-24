@@ -1,0 +1,12 @@
+.colors {
+  &__slider {
+    width: 47px;
+    height: 47px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    &-active {
+      border-color: var(--color-blue);
+    }
+  }
+}

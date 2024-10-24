@@ -1,7 +1,7 @@
 @import "@/styles/media";
 
 .text {
-  font-family: var(--font-noto-sans);
+  font-family: var(--font-montserrat);
   font-size: 14px;
   line-height: 16px;
 
@@ -113,23 +113,23 @@ h6 {
 }
 
 .color-primary {
-  color: var(--color-primary-black);
+  color: var(--color-dark);
 }
 
 .color-usual-gray {
-  color: var(--color-usual-grey);
+  color: var(--color-just-black);
 }
 
 .color-gray {
-  color: var(--color-text-grey);
+  color: var(--color-text-gray);
 }
 
 .color-white {
-  color: var(--color-white);
+  color: var(--color-light);
 }
 
 .color-blue {
-  color: var(--color-primary-blue);
+  color: var(--color-blue);
 }
 
 .color-orange {
@@ -230,11 +230,11 @@ h6 {
 }
 
 .font-family-primary {
-  font-family: var(--font-primary);
+  font-family: var(--font-montserrat);
 }
 
 .font-family-secondary {
-  //font-family: $font-secondary;
+  font-family: var(--font-noto-sans);
 }
 
 .cursor-pointer {

@@ -33,4 +33,17 @@
       right: 4px;
     }
   }
+
+  &-offset-2 {
+    img {
+      padding: 4px;
+    }
+
+    &::before {
+      left: 2px;
+      top: 2px;
+      bottom: 2px;
+      right: 2px;
+    }
+  }
 }

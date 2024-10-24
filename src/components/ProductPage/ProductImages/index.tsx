@@ -2,7 +2,7 @@
 import React, { useState } from "react"
 import { TProductImages } from "@/models/product"
 import { Swiper, SwiperSlide } from "swiper/react"
-import ProductImage from "../ProductImage/ProductImage"
+import ProductImage from "@/components/ProductPage/ProductImage"
 import s from "./style.module.scss"
 import "swiper/css"
 import { FreeMode, Navigation, Thumbs } from "swiper/modules"

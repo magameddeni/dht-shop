@@ -3,14 +3,11 @@ import { Button } from "../button"
 
 interface TAddToBasketProps {
   _id: string
+  fluid?: boolean
 }
 
-const AddToBasket: React.FC<TAddToBasketProps> = ({}) => {
-  return (
-    <div>
-      <Button>В корзину</Button>
-    </div>
-  )
+const AddToBasket: React.FC<TAddToBasketProps> = ({ fluid }) => {
+  return <Button fluid={fluid}>В корзину</Button>
 }
 
 export default AddToBasket

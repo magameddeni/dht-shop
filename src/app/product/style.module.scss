@@ -1,0 +1,11 @@
+.page {
+  &__main_content {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    column-gap: 40px;
+  }
+
+  &__characteristics {
+    max-width: 824px;
+  }
+}

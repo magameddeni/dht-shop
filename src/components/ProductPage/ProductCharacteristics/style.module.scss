@@ -1,0 +1,34 @@
+.wrapper {
+  &__characteristic {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  &__characteristic_title {
+    flex: 1;
+    display: flex;
+    box-sizing: border-box;
+    align-items: flex-end;
+    position: relative;
+    word-break: break-word;
+    padding-right: 5px;
+    &::before {
+      content: "";
+      border-bottom: 1px dotted rgba(204, 214, 228, 0.6);
+      bottom: 0.2em;
+      display: block;
+      left: 5px;
+      right: 5px;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  &__characteristic_value {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+  }
+}

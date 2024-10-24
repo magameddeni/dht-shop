@@ -26,3 +26,19 @@ export interface TProduct {
   colors: TProductColor[]
   characteristics: TProductCharacteristics[]
 }
+
+export interface TProductForCard {
+  _id: string
+  colors: {
+    hex: string
+    name: string
+  }[]
+  images: {
+    link: string
+    _id: string
+  }[]
+  productName: string
+  stock: number
+  regularPrice: number
+  discountPrice: number
+}

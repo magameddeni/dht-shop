@@ -1,6 +1,6 @@
 import React from "react"
 import cx from "classnames"
-import { IColor, ISize } from "@/app/models"
+import { IColor, ISize } from "@/models"
 
 export interface IIconProps extends ISize, IColor {
   children?: React.ReactNode
@@ -12,8 +12,6 @@ export interface IIconProps extends ISize, IColor {
   onClick?: (data?: any) => void
   onBlur?: () => void
   disable?: boolean
-  size?: string
-  color?: string
 }
 
 const Icon = ({

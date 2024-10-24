@@ -1,0 +1,14 @@
+.pay {
+  border: 1px solid var(--color-stroke-fill);
+  border-radius: 10px;
+  padding: 25px;
+
+  &__btn {
+    width: 100%;
+  }
+
+  &__delivery {
+    display: flex;
+    column-gap: 5px;
+  }
+}

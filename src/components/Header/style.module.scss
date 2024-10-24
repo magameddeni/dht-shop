@@ -1,9 +1,24 @@
+.wrapper {
+  border-bottom: 1px solid var(--color-stroke-fill);
+}
+
 .header {
-  font-family: var(--font-jaro);
-  display: flex;
-  justify-content: center;
+  margin: 0 auto;
+  width: var(--media-width);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 30px;
   align-items: center;
-  font-size: 32px;
-  color: var(--color-blue);
-  padding: 7.5px;
+  padding: 28px 0;
+
+  &__center {
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: auto 1fr;
+  }
+
+  &__navigation {
+    display: flex;
+    column-gap: 27px;
+  }
 }

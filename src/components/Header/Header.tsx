@@ -1,9 +1,10 @@
 "use client"
 import React from "react"
-import s from "./style.module.scss"
+import cx from "classnames"
 import { Button } from "../UI/button"
-import { Text } from "../UI/Text"
+import { Text } from "../UI/text"
 import { Icon } from "../UI/icon"
+import s from "./style.module.scss"
 
 const Header = () => {
   const renderInputAndCatalogBtn = () => {
@@ -23,10 +24,10 @@ const Header = () => {
   ]
 
   return (
-    <header className={s.wrapper}>
+    <header className={cx(s.wrapper)}>
       <div className={s.top_header}></div>
 
-      <div className={s.header}>
+      <div className={cx(s.header, "container")}>
         <Text weight='bold' size='xxl' color='orange'>
           High Tech
         </Text>

@@ -1,7 +1,6 @@
 import React from "react"
 import cx from "classnames"
-import { Text } from "@/components/UI/Text"
-import AddToBasket from "@/components/UI/AddToBasket/AddToBasket"
+import { AddToBasket, Text } from "@/components/UI"
 import { setSpaceBetweenCharacters } from "@/helpers/setSpaceBetweenCharacters"
 import s from "./style.module.scss"
 

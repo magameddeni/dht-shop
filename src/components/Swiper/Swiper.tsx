@@ -3,8 +3,8 @@ import React from "react"
 import cx from "classnames"
 import { TProductForCard } from "../../models/product"
 import { Swiper, SwiperSlide } from "swiper/react"
-import ProductCard from "../Product/ProductCard"
 import "swiper/css"
+import { ProductCard } from "../Product"
 
 interface TSwiperSliderProps {
   products: TProductForCard[]

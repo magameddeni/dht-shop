@@ -1,14 +1,17 @@
 import React from "react"
 import cx from "classnames"
 import { $api } from "@/http/axios"
-import { Text } from "@/components/UI/Text"
-import { TProduct, TProductForCard } from "@/models/product"
-import MobileNavigation from "@/components/MobileNavigation"
-import ProductSelectColor from "@/components/ProductPage/ProductSelectColor"
-import ProductImages from "@/components/ProductPage/ProductImages"
-import ProductPay from "@/components/ProductPage/ProductPay"
-import ProductCharacteristics from "@/components/ProductPage/ProductCharacteristics"
+import { Text } from "@/components/UI/text"
 import SwiperSlider from "@/components/Swiper/Swiper"
+import { TProduct, TProductForCard } from "@/models/product"
+import {
+  ProductCharacteristics,
+  ProductImages,
+  ProductPay,
+  ProductSelectColor,
+} from "@/components/Product"
+import { TReview } from "@/models"
+import { Review } from "@/components/Reviews"
 import s from "../style.module.scss"
 
 interface TPageProps {
@@ -18,6 +21,7 @@ interface TPageProps {
 
 interface TProductForPage extends TProduct {
   similar: TProductForCard[]
+  reviews: TReview[]
 }
 
 const page = async ({ params, searchParams }: TPageProps) => {
@@ -25,6 +29,8 @@ const page = async ({ params, searchParams }: TPageProps) => {
   const { color } = await searchParams
 
   const { data, status } = await $api.get<TProductForPage>(`/products/${slug}`)
+
+  console.log(data)
 
   const selectedColor =
     data.colors.find((v) => v.color.name === color) ?? data.colors[0]
@@ -49,15 +55,73 @@ const page = async ({ params, searchParams }: TPageProps) => {
       </article>
 
       {!!data.similar.length && (
-        <article className='offset-top-64'>
-          <Text size='xxl'>Похожие товары</Text>
+        <article
+          className={cx(
+            "offset-top-64",
+            s.page__characteristics,
+            s["page__view-secondary"],
+          )}>
+          <Text as='div' size='xxl' weight='bold' color='orange'>
+            Похожие товары
+          </Text>
           <SwiperSlider products={data?.similar ?? []} />
         </article>
       )}
 
-      <article className={cx("offset-top-64", s.page__characteristics)}>
-        <Text size='xxl'>Характеристики</Text>
+      <article
+        className={cx(
+          "offset-top-64",
+          s.page__characteristics,
+          s["page__view-secondary"],
+        )}>
+        <Text as='div' size='xxl' weight='bold' color='orange'>
+          Характеристики
+        </Text>
         <ProductCharacteristics characteristics={data.characteristics} />
+      </article>
+
+      {!!data.similar.length && (
+        <article
+          className={cx(
+            "offset-top-64",
+            s.page__characteristics,
+            s["page__view-secondary"],
+          )}>
+          <Text as='div' size='xxl' weight='bold' color='orange'>
+            Покупают вместе
+          </Text>
+          <SwiperSlider products={data?.similar ?? []} />
+        </article>
+      )}
+
+      <article
+        className={cx(
+          "offset-top-64",
+          s.page__description,
+          s["page__view-secondary"],
+        )}>
+        <Text as='div' size='xxl' weight='bold' color='orange'>
+          Описание
+        </Text>
+        <Text as='div' className='offset-top-12'>
+          <div dangerouslySetInnerHTML={{ __html: data.description }}></div>
+        </Text>
+      </article>
+
+      <article
+        className={cx(
+          "offset-top-64",
+          s.page__reviews,
+          s["page__view-secondary"],
+        )}>
+        <Text as='div' size='xxl'>
+          Отзывы
+        </Text>
+        <Text as='div' className='offset-top-8'>
+          {data.reviews.map((review) => (
+            <Review key={review._id} {...review} />
+          ))}
+        </Text>
       </article>
     </div>
   )

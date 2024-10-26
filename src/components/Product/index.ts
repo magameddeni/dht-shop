@@ -1,0 +1,6 @@
+export { default as ProductCard } from "./ProductCard"
+export { default as ProductCharacteristics } from "./ProductCharacteristics"
+export { default as ProductImage } from "./ProductImage"
+export { default as ProductImages } from "./ProductImages"
+export { default as ProductPay } from "./ProductPay"
+export { default as ProductSelectColor } from "./ProductSelectColor"

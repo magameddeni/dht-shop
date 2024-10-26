@@ -1,7 +1,7 @@
 import React, { useMemo } from "react"
 import cx from "classnames"
-import { TProductCharacteristics } from "@/models/product"
-import { Text } from "@/components/UI/Text"
+import { Text } from "@/components/UI"
+import { TProductCharacteristics } from "@/models"
 import s from "./style.module.scss"
 
 interface TProductCharacteristicsProps {

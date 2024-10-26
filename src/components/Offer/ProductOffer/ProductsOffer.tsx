@@ -3,7 +3,7 @@ import React from "react"
 import cx from "classnames"
 import SwiperSlider from "../../Swiper/Swiper"
 import s from "./style.module.scss"
-import { Text } from "../../UI/Text"
+import { Text } from "../../UI/text"
 import { TProduct } from "../../../models/product"
 
 interface TProductsOfferProps {

@@ -1,5 +1,6 @@
 "use client"
 import React from "react"
+import cx from "classnames"
 import Image from "next/image"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
@@ -7,7 +8,7 @@ import s from "./style.module.scss"
 
 const Banner = () => {
   return (
-    <div className={s.banner}>
+    <div className={cx(s.banner, "container")}>
       <Swiper spaceBetween={20} slidesPerView={1}>
         <SwiperSlide className={s.banner__slider}>
           <Image

@@ -1,13 +1,12 @@
 "use client"
 import React from "react"
-import ImageComponent from "../ImageComponent/ImageComponent"
-import AddToBasket from "../UI/AddToBasket/AddToBasket"
-import { useWindowSize } from "../../hooks/useWindowSize"
-import { TProductForCard } from "../../models/product"
-import { Text } from "../UI/Text"
-import { setSpaceBetweenCharacters } from "../../helpers/setSpaceBetweenCharacters"
 import cx from "classnames"
 import Link from "next/link"
+import { TProductForCard } from "@/models"
+import { Text, AddToBasket } from "@/components/UI"
+import { useWindowSize } from "@/hooks/useWindowSize"
+import ImageComponent from "@/components/ImageComponent/ImageComponent"
+import { setSpaceBetweenCharacters } from "@/helpers/setSpaceBetweenCharacters"
 import s from "./style.module.scss"
 
 const ProductCard: React.FC<TProductForCard> = ({

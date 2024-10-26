@@ -1,14 +1,14 @@
 "use client"
 import React, { useState } from "react"
-import { TProductImages } from "@/models/product"
 import { Swiper, SwiperSlide } from "swiper/react"
-import ProductImage from "@/components/ProductPage/ProductImage"
-import s from "./style.module.scss"
-import "swiper/css"
+import ProductImage from "@/components/Product/ProductImage"
 import { FreeMode, Navigation, Thumbs } from "swiper/modules"
+import { TImages } from "@/models"
+import "swiper/css"
+import s from "./style.module.scss"
 
 interface TProductImagesProps {
-  images: TProductImages[]
+  images: TImages[]
 }
 
 const ProductImages: React.FC<TProductImagesProps> = ({ images }) => {
@@ -18,7 +18,7 @@ const ProductImages: React.FC<TProductImagesProps> = ({ images }) => {
       <Swiper
         spaceBetween={10}
         slidesPerView={1}
-        modules={[FreeMode, Navigation, Thumbs]}
+        modules={[Navigation, Thumbs]}
         thumbs={{ swiper: thumbsSwiper }}>
         {images.map((v) => (
           <SwiperSlide key={v.link}>

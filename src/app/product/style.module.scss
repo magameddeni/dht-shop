@@ -5,7 +5,13 @@
     column-gap: 40px;
   }
 
-  &__characteristics {
-    max-width: 824px;
+  &__view-secondary {
+    display: grid;
+    grid-template-columns: 300px auto;
+  }
+
+  &__characteristics,
+  &__description {
+    max-width: 1400px;
   }
 }

@@ -1,10 +1,7 @@
-export interface TProductImages {
-  key: string
-  link: string
-}
+import { TImages } from "./file"
 
 export interface TProductColor {
-  images: TProductImages[]
+  images: TImages[]
   regularPrice: number
   discountPrice: number
   color: {
@@ -22,7 +19,7 @@ export interface TProduct {
   _id: string
   productName: string
   categories: string[]
-  description: number
+  description: string
   colors: TProductColor[]
   characteristics: TProductCharacteristics[]
 }
